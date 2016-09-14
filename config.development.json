@@ -1,0 +1,23 @@
+{
+  "session": {
+    "secret": "trckr-session",
+    "resave": true,
+    "rolling": false,
+    "saveUninitialized": true,
+    "cookie": { "maxage": -1, "httpOnly": false, "secure": false }
+  },
+
+  "facebook": {
+    "clientID": "1750638815188779",
+    "clientSecret": "e9f09974e579f669eac13a2f3e1a2bdd",
+    "callbackURL": "http://127.0.0.1:8888/auth/facebook/callback",
+    "enableProof": true
+  },
+  "twitter": {
+    "consumerKey": "C1Gv1qWXsZEf6AqNZMDsJ2oMf",
+    "consumerSecret": "AYTw7tSu91pbYIZAS10XyqUGGOQo7CYdtWbMyQ3MLceCLaSYW4",
+    "access_token_key": "12213112-raB01cn5pCkV5BVuA4IsS1tpX6C9wk5u2ppOqrkPG",
+    "access_token_secret": "S3ou46CJ0TwZEQK0D7BcxJEYSzFDtwwhaXjDBNA4BPLXj",
+    "callbackURL": "http://localhost:8888/auth/twitter/callback"
+  }
+}

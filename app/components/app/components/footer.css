@@ -1,0 +1,23 @@
+@import '../../../style/theme.css';
+
+:root {
+  --footerBackground: var(--background-contrast);
+}
+
+.root {
+  background: var(--footerBackground);
+  color: white;
+  padding: var(--unit);
+}
+
+.navigation {
+  a {
+    color: white;
+  }
+}
+
+.buttonGithub {
+  position: fixed;
+  bottom: var(--unit);
+  right: var(--unit);
+}

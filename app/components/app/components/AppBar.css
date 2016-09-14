@@ -1,0 +1,44 @@
+@import '../../../style/theme.css';
+@import 'react-toolbox/lib/app_bar/config.css';
+@import 'react-toolbox/lib/button/config.css';
+
+:root {
+  --appbar-color: var(--color-primary);
+  --appbar-link-padding: calc(var(--unit) * 1.6);
+  --appbar-link-inactive: color(white alpha(75%));
+  --appbar-link-active: white;
+  --appbar-border-active: inset 0 calc(var(--unit) / -2.5) var(--appbar-link-active);
+}
+
+.root {
+  background: var(--appbar-color);
+
+  & .brand {
+    font-weight: bold;
+    font-size: 150%;
+  }
+}
+
+.navigation {
+  flex-grow: 1;
+  text-align: right;
+  margin-right: var(--button-floating-height);
+
+  & > * {
+    padding: 0 var(--appbar-link-padding);
+    line-height: var(--appbar-height);
+    display: inline-block;
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+  }
+
+  & :not(.active) {
+    color: var(--appbar-link-inactive);
+  }
+
+  & .active {
+    color: var(--appbar-link-active);
+    box-shadow: var(--appbar-border-active);
+  }
+}

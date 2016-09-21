@@ -1,0 +1,62 @@
+@import '../style/theme.css';
+
+:root {
+  --appbar-background-color: var(--color-primary);
+  --appbar-background-primary-color: color(var(--appbar-background-color) blackness(2.5%));
+  --appbar-background-box-shadow: inset 0 -1px 0 0 var(--appbar-background-primary-color);
+  --appbar-link-padding: var(--unit);
+  --appbar-link-inactive: color(white alpha(75%));
+  --appbar-link-active: white;
+  --appbar-border-active: inset 0 calc(var(--unit) / -2.5) var(--appbar-link-active);
+}
+
+.root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--appbar-height);
+  background-color: var(--appbar-background-color);
+  box-shadow: var(--appbar-background-box-shadow);
+  display: flex;
+  align-items: center;
+
+  & .brand {
+    height: var(--appbar-height);
+    width: var(--appbar-height);
+    background: var(--appbar-background-primary-color) url(/static/images/logo.svg) no-repeat center;
+    background-size: var(--avatar-size);
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: var(--offset);
+
+  & > :not(.profile) {
+    padding: 0 var(--appbar-link-padding);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-semi-bold);
+    line-height: var(--appbar-height);
+    text-transform: capitalize;
+
+    &:not(.active) {
+      color: var(--appbar-link-inactive);
+    }
+
+    &.active {
+      color: var(--appbar-link-active);
+      box-shadow: var(--appbar-border-active);
+    }
+  }
+
+  & .profile {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: 50%;
+    background: white;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../style/theme.css';
+
+:root {
+  --footerBackground: var(--background-contrast);
+}
+
+.root {
+  padding: var(--unit);
+  text-align: center;
+  font-size: var(--font-size-tiny);
+}

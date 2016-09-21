@@ -1,0 +1,19 @@
+@import '../../style/theme.css';
+
+:root {
+  --button-height: calc(var(--unit) * 3.2);
+  --button-border-radius: calc(var(--button-height) / 10);
+  --button-padding: 0 var(--unit);
+}
+
+.root {
+  display: block;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  padding: var(--button-padding);
+  height: var(--button-height);
+  line-height: var(--button-height);
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+}
